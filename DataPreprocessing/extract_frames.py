@@ -37,13 +37,13 @@ def video_to_frames(input_loc, output_loc, filename):
     
 
 if __name__=="__main__":
-    path = 'Anomaly-Dataset/Anomaly-Videos-Part-2/Burglary'
-    output_loc = 'output/Anomaly-Videos-Part-2' 
-     
     
-for a in os.listdir(path):
-    print(a)
-    if(a[0]=="."):
-        continue
-    path=os.path.join("Anomaly-Dataset/Anomaly-Videos-Part-2/Burglary",a)
-    count=video_to_frames(path, output_loc,a)
+    path = 'Training_Normal_Videos_Anomaly'
+    output_loc = 'output/Training_Normal_Videos_Anomaly' 
+    
+    for a in os.listdir(path):
+        print(a)
+        if(a[0]=="."):
+            continue
+        path=os.path.join("Training_Normal_Videos_Anomaly",a)
+        video_to_frames(path, output_loc,a)
